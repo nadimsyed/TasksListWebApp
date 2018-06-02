@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TasksListWebApp.Models.Task>
+
+@{
+    ViewBag.Title = "Date Search";
+}
+
+<h2>Date Search</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Completion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.Tasks)
+    {
+        <tr>
+            <td>
+                @item.DueDate
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @(item.Completion ? "Complete" : "Incomplete")
+            </td>
+            <td>
+                @item.User.UserName
+            </td>
+        </tr>
+    }
+
+</table>

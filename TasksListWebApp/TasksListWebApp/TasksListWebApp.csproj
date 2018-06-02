@@ -238,6 +238,9 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Tasks\Listing.cshtml" />
     <Content Include="Views\Tasks\Details.cshtml" />
+    <Content Include="Views\Tasks\DescriptionSearch.cshtml" />
+    <Content Include="Views\Tasks\DateSearch.cshtml" />
+    <Content Include="Views\Tasks\StatusSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,10 +31,37 @@
 
 
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="col-md-offset-2 col-md-12">
             <input type="submit" value="Search" class="btn btn-default" />
         </div>
     </div>
+</form>
+
+<form action="/Tasks/DescriptionSearch">
+
+    <div>
+        <br /><br /><label>Input what word(s), from the description, you want to search for below</label>
+    </div>
+    <input type="text" name="search" />
+    <input type="submit" value="Description Search" class="btn-primary" />
+</form>
+
+<form action="/Tasks/DateSearch">
+
+    <div>
+        <br /><br /><label>Input what date you want to search below</label>
+    </div>
+    <input type="date" name="search" />
+    <input type="submit" value="Date Search" class="btn-primary" />
+</form>
+
+<form action="/Tasks/StatusSearch">
+
+    <div>
+        <br /><br /><label>Input if you want to search for completed or incomplete task(s) below</label>
+    </div>
+    <input type="checkbox" name="search" value="true" />
+    <input type="submit" value="Status Search" class="btn-primary" />
 </form>
     @*<table class="table">
             <tr>

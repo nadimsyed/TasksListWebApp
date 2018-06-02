@@ -135,6 +135,27 @@ namespace TasksListWebApp.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DescriptionSearch(string search)
+        {
+            ViewBag.Tasks = db.Tasks.Where(t => t.Description == search);
+
+            return View();
+        }
+
+        public ActionResult DateSearch(DateTime search)
+        {
+            ViewBag.Tasks = db.Tasks.Where(t => t.DueDate <= search);
+
+            return View();
+        }
+
+        public ActionResult StatusSearch(bool search = false)
+        {
+            ViewBag.Tasks = db.Tasks.Where(t => t.Completion == search);
+
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
