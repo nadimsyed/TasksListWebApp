@@ -9,7 +9,8 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a style="margin-left:2px" href="~/Tasks/Create">Create New</a>
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
 <form action="/Tasks/Listing" method="post">
 
@@ -17,14 +18,14 @@
         @*@Html.LabelFor(model => model.UserId, "UserId", htmlAttributes: new { @class = "control-label col-md-2" })*@
         <div class="col-md-10">
             @*@Html.DropDownList("UserId", null, htmlAttributes: new { @class = "form-control" })*@
-            <select name="UserId">
+            <select style="margin-left:-13px" name="UserId">
                 @foreach (TasksListWebApp.Models.User item in ViewBag.Users)
         {
             <option value="@item.UserId">@item.UserName</option>
 }
             </select>
             @*@Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })*@
-            <input type="submit" style="margin-left:100px" value="Search" class="btn btn-default" /><br /><br /><br /><br />
+            <input type="submit" style="margin-left:286px" value="Search" class="btn btn-default" /><br /><br /><br /><br />
         </div>
     </div>
 
@@ -40,28 +41,28 @@
 <form action="/Tasks/DescriptionSearch">
 
     <div>
-        <br /><br /><label>Input what word(s), from the description, you want to search for below</label>
+        <br /><br /><label>Input what word(s), from the description, you want to search for below</label><br />
     </div>
     <input type="text" name="search" />
-    <input type="submit" value="Description Search" class="btn-primary" />
+    <input type="submit"  style="margin-left:135px" value="Description Search" class="btn-primary" />
 </form>
 
 <form action="/Tasks/DateSearch">
 
     <div>
-        <br /><br /><label>Input what date you want to search below</label>
+        <br /><br /><label>Input what date you want to search below</label><br />
     </div>
     <input type="date" name="search" />
-    <input type="submit" value="Date Search" class="btn-primary" />
+    <input type="submit"  style="margin-left:187px" value="Date Search" class="btn-primary" />
 </form>
 
 <form action="/Tasks/StatusSearch">
 
     <div>
-        <br /><br /><label>Input if you want to search for completed or incomplete task(s) below</label>
+        <br /><br /><label>Input if you want to search for completed or incomplete task(s) below</label><br />
     </div>
     <input type="checkbox" name="search" value="true" />
-    <input type="submit" value="Status Search" class="btn-primary" />
+    <input type="submit"  style="margin-left:318px" value="Status Search" class="btn-primary" />
 </form>
     @*<table class="table">
             <tr>
