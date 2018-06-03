@@ -11,9 +11,11 @@ namespace TasksListWebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Task
     {
+        [Required(ErrorMessage = "A description for the task is required")]
         public string Description { get; set; }
         public System.DateTime DueDate { get; set; }
         public bool Completion { get; set; }

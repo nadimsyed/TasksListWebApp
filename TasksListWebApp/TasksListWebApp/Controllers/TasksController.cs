@@ -137,7 +137,7 @@ namespace TasksListWebApp.Controllers
 
         public ActionResult DescriptionSearch(string search)
         {
-            ViewBag.Tasks = db.Tasks.Where(t => t.Description == search);
+            ViewBag.Tasks = db.Tasks.Where(t => t.Description.Contains(search));
 
             return View();
         }
